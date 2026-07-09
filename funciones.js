@@ -10,8 +10,8 @@ function calcularCapacidadPago(){
     return montoDisponible * 0.5;
 }
 
-function calcularInteresSimple(){
-
+function calcularInteresSimple(monto, tasa, plazoAnios) {
+  return plazoAnios * monto * (tasa / 100);
 }
 
 function calcularTotalPagar(){
