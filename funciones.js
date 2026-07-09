@@ -6,8 +6,9 @@ function calcularDisponible(ingresos, egresos) {
     return disponible;
   }
 }
-function calcularCapacidadPago(){
-    return montoDisponible * 0.5;
+
+function calcularCapacidadPago(montoDisponible) {
+  return montoDisponible * 0.5;
 }
 
 function calcularInteresSimple(monto, tasa, plazoAnios) {
@@ -30,7 +31,3 @@ function aprobarCredito(capacidadPago, cuotaMensual) {
     return false;
   }
 }
-
-
-
-
