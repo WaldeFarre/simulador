@@ -14,8 +14,8 @@ function calcularInteresSimple(monto, tasa, plazoAnios) {
   return plazoAnios * monto * (tasa / 100);
 }
 
-function calcularTotalPagar(){
-
+function calcularTotalPagar(monto, interes) {
+  return monto + interes + 100;
 }
 
 function calcularCuotaMensual(){
