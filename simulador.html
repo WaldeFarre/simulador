@@ -3,44 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Crédito</title>
+    <title>Banco Walden — Simulador de Crédito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="simulador.css">
 </head>
 <body>
+    <main class="card">
+        <header class="brand">
+            <span class="seal" aria-hidden="true">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="46" fill="#0e1a2b" stroke="#c8a24a" stroke-width="2.5"/>
+                    <circle cx="50" cy="50" r="39" fill="none" stroke="#c8a24a" stroke-width="0.7" opacity="0.55"/>
+                    <polyline points="29,35 38,66 50,46 62,66 71,35" fill="none" stroke="#c8a24a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <div class="brand__text">
+                <p class="brand__name">Banco Walden</p>
+                <p class="brand__tag">Simulador de crédito</p>
+            </div>
+        </header>
 
-    <div class="container">
-        <h1>Simulador de Crédito</h1>
+        <section class="block">
+            <h2 class="block__title">Datos financieros</h2>
+            <div class="grid grid--2">
+                <div class="field">
+                    <label for="txtIngresos">Ingresos</label>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtIngresos" inputmode="decimal" placeholder="0.00"></div>
+                </div>
+                <div class="field">
+                    <label for="txtEgresos">Egresos</label>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtEgresos" inputmode="decimal" placeholder="0.00"></div>
+                </div>
+            </div>
+            <dl class="statement">
+                <div class="statement__row"><dt>Disponible mensual</dt><dd id="spnDisponible">—</dd></div>
+                <div class="statement__row"><dt>Capacidad de pago</dt><dd id="spnCapacidadPago">—</dd></div>
+            </dl>
+        </section>
 
-        <h2>Datos financieros</h2>
-        <label for="txtIngresos">Ingresos:</label>
-        <input type="text" id="txtIngresos">
+        <section class="block">
+            <h2 class="block__title">Solicitud de crédito</h2>
+            <div class="grid grid--3">
+                <div class="field">
+                    <label for="txtMonto">Monto</label>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtMonto" inputmode="numeric" placeholder="0"></div>
+                </div>
+                <div class="field">
+                    <label for="txtPlazo">Plazo</label>
+                    <div class="input-wrap"><input type="text" id="txtPlazo" inputmode="numeric" placeholder="0"><span class="affix affix--end">años</span></div>
+                </div>
+                <div class="field">
+                    <label for="txtTasaInteres">Tasa</label>
+                    <div class="input-wrap"><input type="text" id="txtTasaInteres" inputmode="numeric" placeholder="0"><span class="affix affix--end">%</span></div>
+                </div>
+            </div>
+            <dl class="statement">
+                <div class="statement__row"><dt>Interés a pagar</dt><dd id="spnInteresPagar">—</dd></div>
+                <div class="statement__row"><dt>Total del préstamo</dt><dd id="spnTotalPrestamo">—</dd></div>
+                <div class="statement__row statement__row--strong"><dt>Cuota mensual</dt><dd id="spnCuotaMensual">—</dd></div>
+            </dl>
+        </section>
 
-        <label for="txtEgresos">Egresos:</label>
-        <input type="text" id="txtEgresos">
+        <section class="verdict">
+            <span class="verdict__label">Estado del crédito</span>
+            <span class="verdict__pill" id="spnEstadoCredito">ANALIZANDO...</span>
+        </section>
 
-        <p>Disponible: <span id="spnDisponible"></span></p>
-        <p>Capacidad de pago mensual: <span id="spnCapacidadPago"></span></p>
-
-        <h2>Solicitud de crédito</h2>
-        <label for="txtMonto">Monto:</label>
-        <input type="text" id="txtMonto">
-
-        <label for="txtPlazo">Plazo en años:</label>
-        <input type="text" id="txtPlazo">
-
-        <label for="txtTasaInteres">Tasa de interés:</label>
-        <input type="text" id="txtTasaInteres">
-
-        <p>Interés a pagar: <span id="spnInteresPagar"></span></p>
-        <p>Total préstamo: <span id="spnTotalPrestamo"></span></p>
-        <p>Cuota mensual: <span id="spnCuotaMensual"></span></p>
-        <p>Estado de crédito: <span id="spnEstadoCredito">ANALIZANDO...</span></p>
-
-        <div class="buttons">
-            <button id="btnCalcularCredito">Calcular Crédito</button>
-            <button id="btnReiniciar">Reiniciar</button>
+        <div class="actions">
+            <button id="btnCalcularCredito" class="btn btn--primary">Calcular crédito</button>
+            <button id="btnReiniciar" class="btn btn--ghost">Reiniciar</button>
         </div>
-    </div>
 
+        <footer class="foot">Entidad ficticia con fines académicos · Los valores no constituyen una oferta real.</footer>
+    </main>
+
+    <script src="funciones.js"></script>
+    <script src="simulador.js"></script>
 </body>
 </html>

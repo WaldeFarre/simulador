@@ -29,3 +29,19 @@ function calcular() {
   }
 }
 
+function reiniciar() {
+  document.getElementById("txtIngresos").value = "";
+  document.getElementById("txtEgresos").value = "";
+  document.getElementById("txtMonto").value = "";
+  document.getElementById("txtPlazo").value = "";
+  document.getElementById("txtTasaInteres").value = "";
+  document.getElementById("spnDisponible").innerHTML = "";
+  document.getElementById("spnCapacidadPago").innerHTML = "";
+  document.getElementById("spnInteresPagar").innerHTML = "";
+  document.getElementById("spnTotalPrestamo").innerHTML = "";
+  document.getElementById("spnCuotaMensual").innerHTML = "";
+  document.getElementById("spnEstadoCredito").innerHTML = "ANALIZANDO...";
+}
+
+document.getElementById("btnCalcularCredito").addEventListener("click", calcular);
+document.getElementById("btnReiniciar").addEventListener("click", reiniciar);

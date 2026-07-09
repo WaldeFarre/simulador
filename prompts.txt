@@ -1,0 +1,25 @@
+PROMPTS:
+
+PROMPT 1
+Rediseña el simulador con aspecto empresarial de un
+banco, responsive. Es una entidad ficticia: 'Banco Walden', con un
+monograma W dorado original (nada de marcas ajenas). Estética de banca
+privada: lienzo azul noche, tarjeta color pergamino, acento dorado.
+IMPORTANTE: no cambies el JavaScript (funciones.js ni simulador.js) y
+conserva EXACTAMENTE todos los IDs (txtIngresos, txtEgresos, txtMonto,
+txtPlazo, txtTasaInteres, spnDisponible, spnCapacidadPago,
+spnInteresPagar, spnTotalPrestamo, spnCuotaMensual, spnEstadoCredito,
+btnCalcularCredito, btnReiniciar). El botón se conecta con
+addEventListener, así el HTML queda limpio.
+
+PROMPT 2
+Usa una paleta premium de banca: azul tinta #0e1a2b, pergamino #f6f3ec,
+dorado #c8a24a. Tipografías: Fraunces (serif con carácter) para el
+nombre del banco y la cuota mensual, e Instrument Sans para el resto.
+Las cifras con tabular-nums para que queden alineadas.
+
+PROMPT 3
+Agrega prefijos $ en los campos de dinero, sufijos 'años' y '%' donde
+corresponda, estados de foco dorados en los inputs, animación suave al
+cargar la tarjeta, respeta prefers-reduced-motion y que en móvil todo
+se apile en una sola columna.
