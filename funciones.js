@@ -7,7 +7,7 @@ function calcularDisponible(ingresos, egresos) {
   }
 }
 function calcularCapacidadPago(){
-
+    return montoDisponible * 0.5;
 }
 
 function calcularInteresSimple(){
