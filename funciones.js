@@ -18,8 +18,9 @@ function calcularTotalPagar(monto, interes) {
   return monto + interes + 100;
 }
 
-function calcularCuotaMensual(){
-
+function calcularCuotaMensual(total, plazoAnios) {
+  let meses = plazoAnios * 12;
+  return total / meses;
 }
 
 function aprobarCredito(){
