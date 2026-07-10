@@ -1,0 +1,6 @@
+VALIDACIÓNES:
+
+#1
+
+Con los archivos reales del simulador.zip, crea función por función en funciones.js (calcularDisponible, calcularCapacidadPago, calcularInteresSimple, calcularTotalPagar, calcularCuotaMensual, aprobarCredito) y la función calcular() en simulador.js que las usa y muestra los resultados en los spans. Mantén los IDs reales del HTML y no toques el HTML ni el CSS. Después de cada función, dame su commit descriptivo.
+
