@@ -8,28 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="simulador.css">
-    
 </head>
 <body>
     <main class="card">
         <header class="brand">
-            <span class="seal"><img src="images.png" alt="Logo" width="50"></span>
+            <span class="seal"><img src="images.png" alt="Logo Banco Walden" width="50"></span>
             <div class="brand__text">
                 <p class="brand__name">Banco Walden</p>
                 <p class="brand__tag">Simulador de crédito</p>
             </div>
         </header>
-
+ 
         <section class="block">
             <h2 class="block__title">Datos financieros</h2>
             <div class="grid grid--2">
                 <div class="field">
                     <label for="txtIngresos">Ingresos</label>
-                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtIngresos" inputmode="decimal" placeholder="0.00"></div>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtIngresos" inputmode="decimal" placeholder="0.00" aria-describedby="errIngresos"></div>
+                    <span class="error" id="errIngresos" aria-live="polite"></span>
                 </div>
                 <div class="field">
                     <label for="txtEgresos">Egresos</label>
-                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtEgresos" inputmode="decimal" placeholder="0.00"></div>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtEgresos" inputmode="decimal" placeholder="0.00" aria-describedby="errEgresos"></div>
+                    <span class="error" id="errEgresos" aria-live="polite"></span>
                 </div>
             </div>
             <dl class="statement">
@@ -37,21 +38,24 @@
                 <div class="statement__row"><dt>Capacidad de pago</dt><dd id="spnCapacidadPago">—</dd></div>
             </dl>
         </section>
-
+ 
         <section class="block">
             <h2 class="block__title">Solicitud de crédito</h2>
             <div class="grid grid--3">
                 <div class="field">
                     <label for="txtMonto">Monto</label>
-                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtMonto" inputmode="numeric" placeholder="0"></div>
+                    <div class="input-wrap"><span class="affix">$</span><input type="text" id="txtMonto" inputmode="numeric" placeholder="0" aria-describedby="errMonto"></div>
+                    <span class="error" id="errMonto" aria-live="polite"></span>
                 </div>
                 <div class="field">
                     <label for="txtPlazo">Plazo</label>
-                    <div class="input-wrap"><input type="text" id="txtPlazo" inputmode="numeric" placeholder="0"><span class="affix affix--end">años</span></div>
+                    <div class="input-wrap"><input type="text" id="txtPlazo" inputmode="numeric" placeholder="0" aria-describedby="errPlazo"><span class="affix affix--end">años</span></div>
+                    <span class="error" id="errPlazo" aria-live="polite"></span>
                 </div>
                 <div class="field">
                     <label for="txtTasaInteres">Tasa</label>
-                    <div class="input-wrap"><input type="text" id="txtTasaInteres" inputmode="numeric" placeholder="0"><span class="affix affix--end">%</span></div>
+                    <div class="input-wrap"><input type="text" id="txtTasaInteres" inputmode="numeric" placeholder="0" aria-describedby="errTasa"><span class="affix affix--end">%</span></div>
+                    <span class="error" id="errTasa" aria-live="polite"></span>
                 </div>
             </div>
             <dl class="statement">
@@ -60,20 +64,20 @@
                 <div class="statement__row statement__row--strong"><dt>Cuota mensual</dt><dd id="spnCuotaMensual">—</dd></div>
             </dl>
         </section>
-
+ 
         <section class="verdict">
             <span class="verdict__label">Estado del crédito</span>
             <span class="verdict__pill" id="spnEstadoCredito">ANALIZANDO...</span>
         </section>
-
+ 
         <div class="actions">
             <button id="btnCalcularCredito" class="btn btn--primary">Calcular crédito</button>
             <button id="btnReiniciar" class="btn btn--ghost">Reiniciar</button>
         </div>
-
+ 
         <footer class="foot">Entidad ficticia con fines académicos · Los valores no constituyen una oferta real.</footer>
     </main>
-
+ 
     <script src="funciones.js"></script>
     <script src="simulador.js"></script>
 </body>

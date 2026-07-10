@@ -1,6 +1,15 @@
-VALIDACIÓNES:
+VALIDACIÓNES: (con ayuda/métodos)
 
-#1
+Prompt 1: "Agrega validaciones al formulario. Se ejecutan al presionar Calcular y los errores aparecen debajo de cada campo. Todos obligatorios. Ingresos: número, mín 1, máx 1.000.000. Egresos: número, mín 0, máx 1.000.000. Monto: entero, mín 100, máx 100.000. Plazo: entero, mín 1, máx 30. Tasa: entero, mín 1, máx 100. Si algún campo es inválido, no se calcula y los resultados quedan en '—'."
 
-Con los archivos reales del simulador.zip, crea función por función en funciones.js (calcularDisponible, calcularCapacidadPago, calcularInteresSimple, calcularTotalPagar, calcularCuotaMensual, aprobarCredito) y la función calcular() en simulador.js que las usa y muestra los resultados en los spans. Mantén los IDs reales del HTML y no toques el HTML ni el CSS. Después de cada función, dame su commit descriptivo.
 
+Prompt 2: "Cada campo inválido muestra un mensaje claro en español (obligatorio, número no válido, no es entero, menor al mínimo, mayor al máximo) y el recuadro se pone con borde rojo mientras haya error."
+
+
+Prompt 3: "Al presionar Reiniciar, limpia valores, borra mensajes de error, quita bordes rojos y regresa resultados a '—' y estado a ANALIZANDO."
+
+
+Prompt 4: "No cambies la lógica de funciones.js ni los IDs. Mantén el estilo corporativo del Banco Walden, mensajes en el color de alerta de la paleta, todo responsive y legible."
+
+
+Prompt 5: "Agrega aria-describedby en los inputs y aria-live en los mensajes, y reserva el espacio del mensaje para que el formulario no salte al mostrar un error."
