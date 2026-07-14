@@ -31,3 +31,4 @@ function aprobarCredito(capacidadPago, cuotaMensual) {
     return false;
   }
 }
+//s
